@@ -29,6 +29,21 @@ class TmSMMApiV3
         return $this->_api('GET', 'social/' . $id);
     }
 
+    public function cancel($id)
+    {
+        return $this->_api('GET', 'social/cancel/' . $id);
+    }
+
+    public function pause($id)
+    {
+        return $this->_api('GET', 'social/pause/' . $id);
+    }
+
+    public function refill($id)
+    {
+        return $this->_api('GET', 'social/refill/' . $id);
+    }
+
     private function _api($customRequest, $url = '', $params = [])
     {
         $uri = $this->uriAPI . $url . '?token=' . $this->token;
