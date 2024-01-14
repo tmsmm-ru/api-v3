@@ -120,7 +120,7 @@ Array
         'Фраза три'
     ];
 
-    oTmSMM->create([
+    oTmSMM->createOrder([
         'service_id'   => 1, // id сервиса
         'url'          => 'https://www.instagram.com/username', // ссылка на объект
         'count'        => 5, // количество выполнений
@@ -180,7 +180,7 @@ Array
 
     $oTmSMM = new TmSMMApiV3($token);
 
-    $oTmSMM->status('65a14353965b7'); // передавать id заказа
+    $oTmSMM->statusOrder('65a14353965b7'); // передавать id заказа
 ```
 
 ### Пример ответа
@@ -231,3 +231,109 @@ Array
 9 - на модерации
 10 - заблокирован
 ```
+
+## #Поставить заказ на паузу
+
+### Пример запроса
+
+```php
+    <?php
+
+    $token = '';
+
+    $oTmSMM = new TmSMMApiV3($token);
+
+    $oTmSMM->pauseOrder('65a14353965b7'); // передавать id заказа
+```
+
+### Пример ответа
+
+```
+Array
+(
+    [response] => Array
+        (
+            [success] => Array
+                (
+                    [code] => 1
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+```
+
+## #Отменить заказ
+
+### Пример запроса
+
+```php
+    <?php
+
+    $token = '';
+
+    $oTmSMM = new TmSMMApiV3($token);
+
+    $oTmSMM->cancelOrder('65a14353965b7'); // передавать id заказа
+```
+
+### Пример ответа
+
+```
+Array
+(
+    [response] => Array
+        (
+            [success] => Array
+                (
+                    [code] => 1
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+```
+
+## #Refill заказа
+
+### Пример запроса
+
+```php
+    <?php
+
+    $token = '';
+
+    $oTmSMM = new TmSMMApiV3($token);
+
+    $oTmSMM->refillOrder('65a14353965b7'); // передавать id заказа
+```
+
+### Пример ответа
+
+```
+Array
+(
+    [response] => Array
+        (
+            [success] => Array
+                (
+                    [code] => 1
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+```
+
