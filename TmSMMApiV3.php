@@ -24,27 +24,27 @@ class TmSMMApiV3
         return $this->_api('GET', 'services');
     }
 
-    public function create($data)
+    public function createOrder($data)
     {
         return $this->_api('POST', 'social', $data);
     }
 
-    public function status($id)
+    public function statusOrder($id)
     {
         return $this->_api('GET', 'social/' . $id);
     }
 
-    public function cancel($id)
+    public function cancelOrder($id)
     {
         return $this->_api('GET', 'social/cancel/' . $id);
     }
 
-    public function pause($id)
+    public function pauseOrder($id)
     {
         return $this->_api('GET', 'social/pause/' . $id);
     }
 
-    public function refill($id)
+    public function refillOrder($id)
     {
         return $this->_api('GET', 'social/refill/' . $id);
     }
