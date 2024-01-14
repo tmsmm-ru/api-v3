@@ -120,7 +120,7 @@ Array
         'Фраза три'
     ];
 
-    oTmSMM->createOrder([
+    $oTmSMM->createOrder([
         'service_id'   => 1, // id сервиса
         'url'          => 'https://www.instagram.com/username', // ссылка на объект
         'count'        => 5, // количество выполнений
