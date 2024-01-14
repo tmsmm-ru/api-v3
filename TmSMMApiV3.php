@@ -19,6 +19,11 @@ class TmSMMApiV3
         return $this->_api('GET', 'profile');
     }
 
+    public function getServices()
+    {
+        return $this->_api('GET', 'services');
+    }
+
     public function create($data)
     {
         return $this->_api('POST', 'social', $data);
